@@ -13,9 +13,17 @@
 </head>
 <body>
     <div class="container">
+        <div id="current-date" style="font-size:1.2em; color:#888; margin-bottom:1em;"></div>
         <h1>Welcome to My GitHub Pages Webpage!</h1>
         <p>This is a simple static site hosted with GitHub Pages.</p>
         <p>Edit <code>index.html</code> to update this page.</p>
     </div>
+    <script>
+      // Display the current date at the top of the page
+      const dateElem = document.getElementById('current-date');
+      const today = new Date();
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      dateElem.textContent = today.toLocaleDateString(undefined, options);
+    </script>
 </body>
 </html>
